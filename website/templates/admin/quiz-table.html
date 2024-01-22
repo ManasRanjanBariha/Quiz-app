@@ -1,0 +1,17 @@
+{% extends "admin/base.html" %}
+{% block content %}
+    <table class="table">
+        <tr>
+            <td class="text-bold">Id</td>
+            <td class="text-bold">title</td>
+            <td class="text-bold">description</td>
+        </tr>
+        {% for quiz in quizzes %}
+        <tr>
+            <td>{{ quiz.quiz_id }}</td>
+            <td>{{ quiz.title }}</td>
+            <td>{{ quiz.description }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.vh-50{
+    min-height: 60vh;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.heading{
+    font-size:3rem;
+}
+
+.left-img{
+    background-image: url('../static/images/pythonlogin.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.btn-second{
+    background-color: #3C0753;
+    color:white;
+}
+.btn-send:hover{
+    background-color: #C850C0;
+    color: black;
+}
+.bg-1{
+    background-color: #910A67;
+    color: white;
+    cursor: pointer;
+
+}
+.bg-1:hover{
+    background-color:#5e0b44;;
+}
+.h-65{
+    min-height: 150px;
+}

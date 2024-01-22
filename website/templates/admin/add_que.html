@@ -1,0 +1,85 @@
+{% extends "admin/base.html" %} {% block content %}
+<div class="container w-50 text-dark my-5">
+  <h2>Add Quiestion</h2>
+  <form method="post">
+    <label for="title" class="form-label">Question</label>
+    <input
+      type="text"
+      name="question"
+      id="title"
+      class="form-control"
+      required
+    />
+    <label for="quiz_title" class="form-label">Select Quiz Title</label>
+    <select name="quiz_title" id="quiz_title" class="form-control" required>
+      {% for quiz in quizzes %}
+      <option value="{{ quiz.title }}">{{ quiz.title }}</option>
+      {% endfor %}
+    </select>
+    <label class="form-label">Options</label>
+
+    <div class="mb-3">
+      <input type="text" name="option1" class="form-control" required />
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="correct_option"
+          value="option1"
+          required
+        />
+        <label class="form-check-label" for="option1">Correct Option</label>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <input type="text" name="option2" class="form-control" required />
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="correct_option"
+          value="option2"
+          required
+        />
+        <label class="form-check-label" for="option2">Correct Option</label>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <input type="text" name="option3" class="form-control" required />
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="correct_option"
+          value="option3"
+          required
+        />
+        <label class="form-check-label" for="option3">Correct Option</label>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <input type="text" name="option4" class="form-control" required />
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="correct_option"
+          value="option4"
+          required
+        />
+        <label class="form-check-label" for="option4">Correct Option</label>
+      </div>
+    </div>
+
+    <input
+      type="submit"
+      value="Add"
+      name="submit"
+      class="btn btn-primary my-5 form-control"
+    />
+  </form>
+</div>
+{% endblock %}

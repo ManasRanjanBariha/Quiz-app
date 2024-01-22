@@ -1,0 +1,30 @@
+{% extends "base.html"%} {% block content %}
+
+<div class="h-100 m-5 p-5">
+  <div class="card">
+    <div class="card-title text-center py-5"><h2 id="congrat">Congratulations</h2></div>
+    <div class="card-body">
+      <h2 class="text-center">You score <span id="mark"></span> out of <span id="total-mark"></span></h2>
+      <div class="d-flex justify-content-around my-5">
+        <a class="btn btn-primary" href="/">Go Home</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %} {% block script %}
+<script>
+  let res = localStorage.getItem("mark");
+  let totalque = localStorage.getItem("totalquestion");
+  $(document).ready(function () {
+    $("#mark").text(res);
+    $("#total-mark").text(totalque);
+    let avg=Number(res/totalque)
+    if(avg < totalque/2)
+    {
+      $('#congrat').text("Better luck next time")
+    }
+    console.log(res);
+    console.log(totalque);
+  });
+</script>
+{% endblock %}

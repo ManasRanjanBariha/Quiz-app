@@ -1,0 +1,25 @@
+{% extends "base.html" %} {% block title %}Home page{% endblock %} {% block
+content %}
+<div class="h-75">
+  <div class="h-100 w-100 bg-secondary vh-50 flex">
+    <div>
+      <h2 class="heading text-white fw-bolder">Take out Python Quiz</h2>
+      <h2 class="heading text-white fw-bolder">Test Your knowledge</h2>
+    </div>
+  </div>
+</div>
+<div class="my-5">
+    <h2 class="heading">Categories</h2>
+  <div class="row">
+    {% for quiz in quizzes %}
+    <div class="col-sm-6 col-md-4 my-4 " onclick="getQuestion( {{ quiz.quiz_id }} )" >
+    <div class="card bg-1 h-65">
+        <div class="card-body ">
+          <h5 class="card-title my-2">{{ quiz.title }}</h5>
+          <h6 class="card-subtitle ">{{ quiz.description }}</h6>
+        </div>
+      </div>
+    </div>{% endfor%}
+  </div>
+</div>
+{% endblock %}

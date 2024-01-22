@@ -1,0 +1,17 @@
+{% extends "admin/base.html" %}
+{% block content %}
+    <table class="table">
+        <tr>
+            <td class="text-bold">Id</td>
+            <td class="text-bold">Email</td>
+            <td class="text-bold">Name</td>
+        </tr>
+        {% for user in users %}
+        <tr>
+            <td>{{ user.id }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.name }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
